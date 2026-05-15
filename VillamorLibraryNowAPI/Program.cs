@@ -27,4 +27,7 @@ var summaries = new[]
 
 app.MapControllers();
 
+app.MapGet("/", () => "VillamorLibraryNowAPI is running.");
+
+
 app.Run();
