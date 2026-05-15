@@ -8,7 +8,7 @@ WORKDIR /src
 
 COPY . .
 RUN dotnet restore "VillamorLibraryNowAPI/VillamorLibraryNowAPI.csproj"
-RUN dotnet restore "VillamorLibraryNowAPI/VillamorLibraryNowAPI.csproj" -c Release -o /app/out
+RUN dotnet publish "VillamorLibraryNowAPI/VillamorLibraryNowAPI.csproj" -c Release -o /app/out --no-restore
 
 FROM base AS final
 WORKDIR /app
